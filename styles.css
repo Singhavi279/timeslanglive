@@ -164,8 +164,10 @@ a:hover { color: var(--lime); }
 .language-gate-card {
   position: relative; z-index: 10; width: 100%; max-width: 800px;
   background: var(--bg-glass); border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg); padding: 40px; text-align: center;
+  border-radius: var(--radius-lg); padding: 24px; text-align: center;
   box-shadow: var(--glow-cyan);
+  max-height: 90vh;
+  overflow-y: auto;
 }
 .language-gate-card h2 { background: linear-gradient(90deg, var(--cyan), var(--lime)); -webkit-background-clip: text; color: transparent; font-size: clamp(32px, 6vw, 64px); text-transform: uppercase; margin-bottom: 8px; }
 .language-gate-sub { color: var(--text-muted); font-size: 18px; margin-bottom: 32px; }
@@ -380,6 +382,7 @@ a:hover { color: var(--lime); }
 
 /* MD: Tablets */
 @media (min-width: 768px) {
+  .language-gate-card { padding: 40px; }
   .hero-split { grid-template-columns: 1fr 1fr; }
   .category-split { grid-template-columns: 0.8fr 1.2fr; }
   .cta-split { grid-template-columns: 1.2fr 0.8fr; padding: 60px; text-align: left; }
