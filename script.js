@@ -298,8 +298,10 @@
       if (!img) return;
       var newSrc = 'assets/' + baseName + '_' + lang + '.png';
       var fallbackSrc = 'assets/' + baseName + '_' + DEFAULT_LANG + '.png';
+      if (img.getAttribute('src') === newSrc) return;
       img.onerror = function() {
-        if (img.src !== fallbackSrc) img.src = fallbackSrc;
+        img.onerror = null;
+        img.src = fallbackSrc;
       };
       img.src = newSrc;
     }
